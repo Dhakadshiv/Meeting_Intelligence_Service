@@ -3,7 +3,7 @@ const cors=require("cors")
 
 const app=express();
 app.use(cors())
-const cookiParser=require("cookie-parser") 
+const cookieParser=require("cookie-parser") 
 const swagger=require("./swagger")
 require("dotenv").config();
 require("./EmailService/email")
