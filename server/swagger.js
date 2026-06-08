@@ -36,7 +36,7 @@ const options={
         ],
         servers:[
             {
-                url: "https://www.linkedin.com/safety/go?url=https%3A%2F%2Fmeeting-intelligence-service-rbnl.onrender.com%2F&trk=flagship-messaging-web&messageThreadUrn=urn%3Ali%3AmessagingThread%3A2-ZDNiN2U4ZjYtMTdmYS00ZTA4LWI3YzYtZTRjMjQzMTFlNmRiXzEwMA%3D%3D&lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging_conversation_detail%3BPtG0na%2F8QyWTxMDlFf8QlA%3D%3D",
+                url: "https://meeting-intelligence-service-rbnl.onrender.com",
                 description: "Development server"
             }
         ],
