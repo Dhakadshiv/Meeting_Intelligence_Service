@@ -13,9 +13,9 @@ const router = express.Router();
 router.get("/evaluation", (req, res) => {
     res.status(200).json({
         candidateName: "Shivam Dhakad",
-        email: "your-email@example.com",
-        repositoryUrl: "https://github.com/shivam/project",
-        deployedUrl: "https://your-app.onrender.com",
+        email: "shivamdhakad324@gmail.com",
+        repositoryUrl: "https://www.linkedin.com/safety/go?url=https%3A%2F%2Fgithub.com%2FDhakadshiv%2FMeeting_Intelligence_Service%2Ftree%2Fmain&trk=flagship-messaging-web&messageThreadUrn=urn%3Ali%3AmessagingThread%3A2-ZDNiN2U4ZjYtMTdmYS00ZTA4LWI3YzYtZTRjMjQzMTFlNmRiXzEwMA%3D%3D&lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging_conversation_detail%3BLhxpkN6tTn2yHXVFLJ3%2Byg%3D%3D",
+        deployedUrl: "https://www.linkedin.com/safety/go?url=https%3A%2F%2Fmeeting-intelligence-service-rbnl.onrender.com%2Fapi-docs%2F&trk=flagship-messaging-web&messageThreadUrn=urn%3Ali%3AmessagingThread%3A2-ZDNiN2U4ZjYtMTdmYS00ZTA4LWI3YzYtZTRjMjQzMTFlNmRiXzEwMA%3D%3D&lipi=urn%3Ali%3Apage%3Ad_flagship3_messaging_conversation_detail%3BLhxpkN6tTn2yHXVFLJ3%2Byg%3D%3D",
         externalIntegration: "Email",
         features: [
             "Authentication",
