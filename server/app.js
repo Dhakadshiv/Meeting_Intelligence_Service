@@ -17,7 +17,7 @@ const EvaluationRoute =require("./routes/evaluation")
 
 app.use(traceMiddleware);
 app.use(express.json());
-app.use(cookiParser())
+app.use(cookieParser())
 app.use("/api-docs",swagger)
 
 app.use("/api",EvaluationRoute)
