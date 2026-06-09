@@ -1,130 +1,94 @@
-# Meeting Intelligence Service
+# Hintro — Backend API
 
-## Overview
+A RESTful backend built with **Node.js + Express**, powering the Hintro assignment platform. It handles user authentication, AI-assisted features via Google Gemini, scheduled tasks, and transactional emails.
 
-Meeting Intelligence Service is a backend application that helps teams manage meetings, analyze meeting transcripts using AI, track action items, detect overdue tasks, and send reminder notifications.
+---
 
-The system is built using Node.js, Express.js, MongoDB, Gemini AI, and Swagger.
+## Tech Stack
 
-## Features
+| Layer | Tool |
+|---|---|
+| Runtime | Node.js |
+| Framework | Express v5 |
+| Database | MongoDB (Mongoose) |
+| AI | Google Gemini (`@google/genai`) |
+| Auth | JWT + cookie-parser |
+| Email | Resend |
+| Scheduler | node-cron |
+| API Docs | Swagger (swagger-jsdoc + swagger-ui-express) |
 
-* User Registration and Login
-* JWT Authentication
-* Meeting Creation and Management
-* AI-Powered Meeting Analysis
-* Transcript Citation Support
-* Action Item Management
-* Action Item Status Tracking
-* Overdue Task Detection
-* Scheduled Reminder Jobs
-* Third-Party Notification Integration
-* Swagger API Documentation
-* Global Error Handling
-* Request Trace ID Support
+---
 
-## Technology Stack
+## Getting Started
 
-* Node.js
-* Express.js
-* MongoDB
-* Mongoose
-* Gemini AI
-* JWT Authentication
-* Swagger OpenAPI
-* Node Cron
-* Render
+### Prerequisites
+- Node.js v18+
+- MongoDB Atlas account (or local MongoDB)
+- API keys for Gemini and Resend
 
-## Installation
-
-Clone Repository
+### Installation
 
 ```bash
-git clone <repository-url>
-cd Meeting_Intelligence_Service
-```
-
-Install Dependencies
-
-```bash
+git clone https://github.com/your-username/hintro_assignment.git
+cd hintro_assignment
 npm install
 ```
 
-Create Environment File
+### Environment Setup
+
+Create a `.env` file in the root directory:
 
 ```env
 PORT=3000
-MONGODB_URI=your_mongodb_connection_string
+MONGO_URI=your_mongodb_connection_string
+GEMINI_API=your_gemini_api_key
 JWT_SECRET=your_jwt_secret
-GEMINI_API_KEY=your_gemini_api_key
-
+RESEND_API=your_resend_api_key
 ```
 
-Run Application
+> `.env` is gitignored — never commit it.
+
+### Run
 
 ```bash
-npm start
+node server.js
 ```
 
+Server starts at `http://localhost:3000`
 
+---
+
+## Project Structure
+
+```
+hintro_assignment/
+├── server.js               # Entry point
+├── server/
+│   ├── app.js              # Express app setup
+│   ├── database/
+│   │   └── db.js           # MongoDB connection
+│   ├── routes/             # API route definitions
+│   ├── controllers/        # Route handlers
+│   ├── models/             # Mongoose schemas
+│   ├── middleware/         # Auth, error handling
+│   └── utils/              # Helpers (email, cron, AI)
+├── .env                    # Environment variables (gitignored)
+├── .gitignore
+└── package.json
+```
+
+---
 
 ## API Documentation
 
-Swagger URL:
+Swagger UI is available at:
 
-```text
-https://your-render-url/api-docs
+```
+http://localhost:3000/api-docs
 ```
 
-## Deployment
+---
 
-Application is deployed on Render.
+## License
 
-Deployment URL:
-
-```text
-https://your-render-url
-```
-
-## API Examples
-
-Create Meeting
-
-POST /api/meetings
-
-```json
-{
-  "title": "Sprint Planning",
-  "participants": [
-    "Alice",
-    "Bob"
-  ],
-  "meetingDate": "2026-06-01",
-  "transcript": [
-    {
-      "timestamp": "00:10",
-      "speaker": "Alice",
-      "text": "We should launch next Friday."
-    }
-  ]
-}
-```
-
-Analyze Meeting
-
-POST /api/analyze/:id
-
-Create Action Item
-
-POST /api/action-items
-
-Update Action Item Status
-
-PATCH /api/action-items/:id/status
-
-Get Action Items
-
-GET /api/action-items
-
-## Author
-
-Shivam Dhakad
+ISC
